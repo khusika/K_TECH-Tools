@@ -1,0 +1,20 @@
+List of command
+> Install framework
+	apktool if framework-res.apktool
+	
+> Decompile apk
+	apktool d name_of_apk.apk
+	or
+	apktool d -f name_of_apk.apk
+
+> Compile apk
+	apktool b name_of_apk
+	
+> Sign apk
+	signapk name_of_apk.apk name_of_apk_signed.apk
+	
+> Baksmali
+	java -jar baksmali-2.0.3.jar -o classout/ classes.dex
+	
+> Smali
+	java -Xmx512M -jar smali-2.0.3.jar classout/ -o new-classes.dex
