@@ -45,7 +45,7 @@ echo Tool version :
 echo In Test
 echo -----
 echo Apktool version :
-echo 1.4.3 and 2.0.0-RC2
+echo 1.5.2 and 2.0.0-RC3
 echo -----
 echo Baksmali and Smali version :
 echo 2.0.3
@@ -55,14 +55,12 @@ goto restart
 
 :ApkToolVersion
 echo 1.	apktool_1.5.2
-echo 2.	apktool_1.SlimRoms
-echo 3.	apktool_1.SlimRoms.KitKat
-echo 4.	2.0.0-RC2
+echo 2.	apktool_2.SlimRoms
+echo 3.	2.0.0-RC3
 SET /P menunr=Please make your decision: 
 IF %menunr%==1 (goto 1xx)
 IF %menunr%==2 (goto 2xx)
 IF %menunr%==3 (goto 3xx)
-IF %menunr%==4 (goto 4xx)
 goto restart
 :1xx
 if exist "%~dp0\apktool.jar" del /s /q "%~dp0\apktool.jar"
@@ -73,22 +71,15 @@ PAUSE
 goto restart
 :2xx
 if exist "%~dp0\apktool.jar" del /s /q "%~dp0\apktool.jar"
-copy "%~dp0\tools\apktool\apktool_1.SlimRoms.jar" "%~dp0\"
-rename "%~dp0\apktool_1.SlimRoms.jar" "apktool.jar"
+copy "%~dp0\tools\apktool\apktool_2.SlimRoms.jar" "%~dp0\"
+rename "%~dp0\apktool_2.SlimRoms.jar" "apktool.jar"
 echo Installed
 PAUSE
 goto restart
-:3xx
+:3xx'
 if exist "%~dp0\apktool.jar" del /s /q "%~dp0\apktool.jar"
-copy "%~dp0\tools\apktool\apktool_1.SlimRoms.KitKat.jar" "%~dp0\"
-rename "%~dp0\apktool_1.SlimRoms.KitKat.jar" "apktool.jar"
-echo Installed
-PAUSE
-goto restart
-:4xx'
-if exist "%~dp0\apktool.jar" del /s /q "%~dp0\apktool.jar"
-copy "%~dp0\tools\apktool\apktool_2.0.0b9.jar" "%~dp0\"
-rename "%~dp0\apktool_2.0.0rc2.jar" "apktool.jar"
+copy "%~dp0\tools\apktool\apktool_2.0.0rc3.jar" "%~dp0\"
+rename "%~dp0\apktool_2.0.0rc3.jar" "apktool.jar"
 echo Installed
 PAUSE
 goto restart
