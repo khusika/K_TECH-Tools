@@ -76,7 +76,7 @@ rename "%~dp0\apktool_2.SlimRoms.jar" "apktool.jar"
 echo Installed
 PAUSE
 goto restart
-:3xx'
+:3xx
 if exist "%~dp0\apktool.jar" del /s /q "%~dp0\apktool.jar"
 copy "%~dp0\tools\apktool\apktool_2.0.0rc3.jar" "%~dp0\"
 rename "%~dp0\apktool_2.0.0rc3.jar" "apktool.jar"
